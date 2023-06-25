@@ -67,7 +67,7 @@ function sumOddNumbers(arr) {
   return sum;
 }
 
-console.log(sumOddNumbers(nestedArr)); 
+console.log(sumOddNumbers(newArr)); 
 
 
 
