@@ -30,28 +30,18 @@ farePrice()
 //should return true or false
 
 const status1 ={
-    status: 'onTheWay'
+  status: 'onTheWay'
 }
 const status2 ={
-    status: 'success'
+  status: 'success'
 }
-const checkIfSucces=()=>{
+const checkIfSucces=(obj)=>{
 //write your code here
+return obj.status === "success";
+}
 
-function lookUpProfile(status ) {
-  for (let i = 0; i < contacts.length; i++) {
-    if (contacts[i].firstName === name) {
-      if (prop in contacts[i]) {
-        return contacts[i][prop];
-      } else {
-        return "No such property";
-      }
-    }
-  }
-  return "No such contact";
-}
-}
+
 checkIfSucces(status1)  //should return false
 
-checkIfSucces(status2)  //should return true 
+checkIfSucces(status2) //should return true
 

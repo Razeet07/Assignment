@@ -1,9 +1,7 @@
 // Q1. easy level
-
 const arr = [2,5,6,7]
 //calculate the sum of the array using either "for of" Or "for in" Loop.
 let sum = 0;
-//using "for of" loop use in arr
 for (let i of arr)
 {
   sum = sum + i;
@@ -26,32 +24,17 @@ console.log(removeDuplicate(users));
 
 
 // Q3.
-
 const newArr = [[4,5], [5,7], [7,2]]
 //calculate the sum of all the odd numbers inside this nested array
 
+const sumOfOddNumber = newArr
+  .flat()
+  .reduce((sum) => (num%2 !== 0 ? sum+sum :sum),0);
+  console.log(sumOfOddNumber);
 
-function sumOddNumbers(arr) {
-  let sum = 0;
-
-  for (let i = 0; i < arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-      sum += sumOddNumbers(arr[i]); // Recursive call for nested arrays
-      
-      
-    } else if (typeof arr[i] === 'number' && arr[i] % 2 !== 0) {
-      sum += arr[i]; // Add odd numbers to the sum
-    }
-  }
-
-  return sum;
-}
 
 
 // Q4
-console.log(sumOddNumbers(newArr)); 
-
-
 const myDetails = [
   {id:3, name: 'hari'},
   {id:5, name: 'shyam'},
@@ -63,6 +46,8 @@ const myDetails = [
 myDetails.map((item)=>{
 return item.id
 })
+
+
 
 // Q5
 const userDetails= [

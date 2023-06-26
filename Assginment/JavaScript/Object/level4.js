@@ -14,16 +14,8 @@ obtScore.forEach((items)=>{
   sum = sum + items;
 })
 
-console.log(sum)
 const percent = (sum/150)*100
 console.log(percent)
-
-
-
-
-
-
-
 
 
 
@@ -48,8 +40,6 @@ const newDetails = (name, subjectCodes, subjectScore) => ({
   subjectScore
 });
 
-
-
-const details1 = newDetails(name, ["M", "S", ""], [23, 35, 30]);
+const details1 = newDetails(name, ["M", "S", "G"], [23, 35, 30]);
 
 console.log(details1);
