@@ -22,26 +22,6 @@ function removeDuplicate(users){
 
 }
 console.log(removeDuplicate(users));
-// ----------------------------------------------------------------------------
-
-/* Method 2 using Loop and If condition to remove dup..  strings*/
-
-const names =['hari', 'shyam', 'hari']
-function removeDuplicates(names) {
-  let newName = [];
-  for (i = 0; i < names.length; i++) {
-      if (unique.indexOf(names[i]) === -1) {
-          unique.push(names[i]);
-      }
-  }
-  return newName;
-}
-console.log(removeDuplicates(names));
-
-//we can also use Set method , As set automaticall remove duplicate string from array
-/* pseudocode:
-let uniqueArr = Array.from(new Set(users));
-*/
 
 
 
@@ -67,8 +47,39 @@ function sumOddNumbers(arr) {
   return sum;
 }
 
+
+// Q4
 console.log(sumOddNumbers(newArr)); 
 
+
+const myDetails = [
+  {id:3, name: 'hari'},
+  {id:5, name: 'shyam'},
+  {id:6, name: 'gopal'},
+]
+
+// return only array of ids: expected output  [3,5,6]
+
+myDetails.map((item)=>{
+return item.id
+})
+
+// Q5
+const userDetails= [
+  {score: 0, name:'hari', marks: [10,3,23]},
+  {score: 0, name:'shyam', marks: [50,23,23]},
+  {score: 0, name:'shyam',marks: [20,13,43]},
+]
+//loop over the arr of objects and calculate total score, expected output is:
+
+userDetails.map((item)=>{
+  let sum = 0;
+  item.marks.map((value)=>{
+  sum = sum + value;
+})
+item.score = sum;
+return userDetails
+})
 
 
 

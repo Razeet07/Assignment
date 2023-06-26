@@ -47,19 +47,6 @@ const user= 'hari'
 const userArr = ['hari','shyam','hari','thakur']
 
 
-const newArr = userArr
-  .map((userArr) => {
-    return {
-      count: 1,
-      name: userArr
-    };
-  })
-  
-  .reduce((result, b) => {
-    result[b.name] = (result[b.name] || 0) + b.count;
 
-    return result;
-  }, {});
-const duplicates = Object.keys(uniq).filter((a) => uniq[a] > 1);
-
-console.log(duplicates); 
+const duplicates = userArr.filter(item => item === user).length;
+console.log(duplicates);
